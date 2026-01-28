@@ -1,7 +1,8 @@
 
 
-const POKEAPI_URL = 'https://pokeapi.co/api/v2/pokemon?limit=20';
+const POKEAPI_URL = 'https://pokeapi.co/api/v2/pokemon';
 let randomPoke="";
+let pokeDetails={};
 async function initPokedex() {
     console.log("Chargement via PokeAPI...");
 
@@ -20,14 +21,26 @@ async function initPokedex() {
         console.log(`Succès ! ${pokemons.length} Pokémon récupérés.`);
 
          randomPoke = getRandomPokemon(pokemons);
-        console.log("Mon Pokémon aléatoire est :", randomPoke);
+         if (randomPoke) {
+             const detailResponse = await fetch(randomPoke.url);
+             pokeDetails = await detailResponse.json();
+         }
+         console.log(pokeDetails);
+        const bouton = document.querySelector('#btn-random');
+        if (randomPoke) {
+            bouton.textContent = randomPoke.name;
+        } else {
+            bouton.textContent = "Deso il est mort";
+        }
 
     } catch (error) {
         console.error("Erreur :", error);
     }
 }
-
-initPokedex();
+// Remplace ton appel direct "initPokedex();" par ceci :
+document.addEventListener('DOMContentLoaded', () => {
+    initPokedex();
+});
 
 
 function getRandomPokemon(pokemons){
