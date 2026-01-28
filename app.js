@@ -20,14 +20,21 @@ async function initPokedex() {
         console.log(`Succès ! ${pokemons.length} Pokémon récupérés.`);
 
          randomPoke = getRandomPokemon(pokemons);
-        console.log("Mon Pokémon aléatoire est :", randomPoke);
+        const bouton = document.querySelector('#btn-random');
+        if (randomPoke) {
+            bouton.textContent = randomPoke.name;
+        } else {
+            bouton.textContent = "Déso pas de pokémon";
+        }
 
     } catch (error) {
         console.error("Erreur :", error);
     }
 }
-
-initPokedex();
+// Remplace ton appel direct "initPokedex();" par ceci :
+document.addEventListener('DOMContentLoaded', () => {
+    initPokedex();
+});
 
 
 function getRandomPokemon(pokemons){
