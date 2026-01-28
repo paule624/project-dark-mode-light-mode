@@ -30,7 +30,7 @@ async function initPokedex() {
         if (randomPoke) {
             bouton.textContent = randomPoke.name;
         } else {
-            bouton.textContent = "Déso pas de pokémon";
+            bouton.textContent = "Deso il est mort";
         }
 
     } catch (error) {
