@@ -1,3 +1,40 @@
-# Project Dark Mode Light Mode
+# Pokémon Card Pricing Landing Page
 
-## utilisation de l'api Pokemon TCG : https://tcgdex.dev/fr
+Ce projet est une landing page dédiée à la consultation des prix des cartes Pokémon. Il s'agit d'un projet éducatif réalisé en **HTML, CSS et JavaScript natif (Vanilla JS)**, sans aucun framework ni dépendance externe.
+
+Les données sont récupérées dynamiquement via l'API [TCGdex](https://tcgdex.dev/fr).
+
+## Objectifs du Projet
+
+- Créer une interface utilisateur (UI) propre et responsive.
+- Implémenter un système de **Dark Mode / Light Mode**.
+- Récupérer et afficher les données des cartes (images, noms, prix si disponibles) via l'API.
+- Gérer la logique de présentation en JavaScript pur.
+
+## Stack Technique
+
+- **HTML5** : Structure sémantique de la page.
+- **CSS3** : Mise en forme, Flexbox/Grid, variables CSS pour le _theming_ (Dark/Light).
+- **JavaScript (Vanilla)** : Manipulation du DOM, appels API (`fetch`), gestion des événements.
+
+## 📦 Structure et Workflow Git
+
+Le projet suit ce flux de développement :
+
+1.  **`development`** : Branche principale de développement. Toutes les nouvelles fonctionnalités (`feat/`) partent d'ici et y sont fusionnées.
+2.  **`main`** : Branche stable. Reflète l'état validé du projet.
+3.  **`gh-pages`** : Branche de production pour le déploiement statique.
+
+## Installation et Lancement
+
+1.  Cloner le dépôt :
+    ```bash
+    git clone https://github.com/paule624/project-dark-mode-light-mode.git
+    ```
+2.  Ouvrir le fichier `index.html` dans votre navigateur.
+
+## API
+
+Nous utilisons l'API publique TCGdex :
+
+- Documentation : [https://tcgdex.dev/fr](https://tcgdex.dev/fr)
