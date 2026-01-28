@@ -1,0 +1,17 @@
+{
+  "name": "project-dark-mode-light-mode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paule624/project-dark-mode-light-mode.git"
+  },
+  "private": true,
+  "dependencies": {
+    "@tcgdex/sdk": "^2.7.1"
+  }
+}
